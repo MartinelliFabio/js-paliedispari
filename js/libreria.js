@@ -15,5 +15,17 @@ function parolaPalindroma(parolaUtente) {
     let parola = parolaUtente.toLowerCase();
     let parolaInvertita = parola.split('').reverse().join('');
     return parolaInvertita == parola;
-    
+
+}
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function isEven(num){
+    if(num % 2 === 0){
+        return true;
+    } else {
+        return false;
+    }
 }
