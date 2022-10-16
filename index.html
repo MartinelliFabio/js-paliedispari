@@ -5,26 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript -->
     <script src="./js/libreria.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Pali e Dispari</title>
 </head>
 <body>
 
-<div class="container container-parola mt-3">
-    <input type="text" id="parola" name="parola">
-    <button id="controlla">Controlla</button>
-    <p id="output-parola" class="fw-bold"></p>
-</div>
+<header>
 
-<div class="container container-number mt-3">
-    <input type="text" name="numero" id="pari-dispari">
-    <input type="number" id="input-numero">
-    <button id="check">Inserisci numero</button>
-    <p id="output-numero" class="fw-bold"></p>
-</div>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="container justify-content-center">
+        <a class="navbar-brand fs-1 fw-bold text-white" href="#"><span>Pali&Dispari</span></a>
+    </div>
+</nav>
+
+</header>
 
 
+<main>
+    <div class="container text-center container-form d-flex flex-row text-white d-flex ">
+        
+        <div class="container container-parola mt-5 d-flex flex-column">
+            <h2 class="mb-5 fw-bold fs-1">Palindroma</h2>
+            <label class="text-start fw-bold">Inserisci una parola per vedere se è palindroma</label>
+            <input type="text" id="parola" name="parola" class="mb-3 py-2 rounded-2">
+            <button id="controlla" class="text-uppercase text-white fw-bold py-2 rounded-4">Controlla</button>
+            <p id="output-parola" class="fw-bold fs-5"></p>
+        </div>
+    
+        <div class="container container-number mt-5 d-flex flex-column">
+            <h2 class="mb-5 fw-bold fs-1">Pari & Dispari</h2>
+            <label class="text-start fw-bold">Scegli se il valore finale è pari o dispari</label>
+            <select type="text" name="numero" id="pari-dispari" class="mb-3 w-25 py-2 fw-bold rounded-2">
+                <option value="vuoto">---</option>
+                <option value="pari">Pari</option>
+                <option value="dispari">Dispari</option>
+            </select>
+            <label class="text-start fw-bold">Inserisci un numero da 1 a 5</label>
+            <input type="number" id="input-numero" class="mb-3 py-2 rounded-2">
+            <button id="check" class="text-uppercase text-white fw-bold py-2 rounded-4">Inserisci numero</button>
+            <p id="output-numero" class="fw-bold fs-5 "></p>
+        </div>
+    </div>
+</main>
+
+
+
+<!-- JavaScript -->
 <script src="./js/script.js">
 
 </script>

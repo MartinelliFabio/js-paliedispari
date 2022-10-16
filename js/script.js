@@ -68,7 +68,7 @@ checkButton.addEventListener('click', function(){
     } removeFirstNotification();
 
     // Istruzione if per verificare se l'utente ha inserito correttamente un numero da 1 a 5
-    if(inputUtente < 0 || inputUtente > 5) {
+    if(inputUtente < 0 || inputUtente > 5 || !inputUtente) {
         risultatoNumber.innerHTML = '';
         const divAlert = notificationError('Devi inserire un numero da 1 a 5!');
         containerNumber.prepend(divAlert);
@@ -82,11 +82,11 @@ checkButton.addEventListener('click', function(){
 
     // Istruzione if per verificare chi ha vinto tra l'utente o il computer
     if(isEven(sommaTotale) && sceltaPariDispari == pari) {
-        risultatoNumber.innerHTML = 'Ha vinto l\'utente\'';
+        risultatoNumber.innerHTML = "Il numero dell'utente è: " + inputUtente + '<br>' + 'Il numero del computer è: ' + numeroComputer + '<br>' + 'La somma dei due numeri è: ' + sommaTotale + '<br>' + "Ha vinto l'utente";
     } else if(!isEven(sommaTotale) && sceltaPariDispari == dispari) {
-        risultatoNumber.innerHTML = "Ha vinto l'utente";
+        risultatoNumber.innerHTML = "Il numero dell'utente è: " + inputUtente + '<br>' + 'Il numero del computer è: ' + numeroComputer + '<br>' + 'La somma dei due numeri è: ' + sommaTotale + '<br>' + "Ha vinto l'utente";
     } else {
-        risultatoNumber.innerHTML = 'Ha vinto il computer';
+        risultatoNumber.innerHTML = "Il numero dell'utente è: " + inputUtente + '<br>' + 'Il numero del computer è: ' + numeroComputer + '<br>' + 'La somma dei due numeri è: ' + sommaTotale + '<br>' + 'Ha vinto il computer';
         // Svuoto gli input dopo che il computer ha vinto
         inputNumberHTML.value = '';
         sceltaHTMl.value = '';
